@@ -34,7 +34,6 @@ public class EmployeesIndexServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         EntityManager em = DBUtil.createEntityManager();
 
-        //System.out.println("通過");
         int page = 1;
         try {
            page = Integer.parseInt( request.getParameter( "page" ) );
@@ -58,7 +57,6 @@ public class EmployeesIndexServlet extends HttpServlet {
             request.getSession().removeAttribute( "flush" );
         }
 
-        //response.getWriter().append("Served at: ").append(request.getContextPath());
         RequestDispatcher rd = request.getRequestDispatcher( "/WEB-INF/views/employees/index.jsp" );
         rd.forward( request, response );
 
