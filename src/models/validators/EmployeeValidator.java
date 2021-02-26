@@ -54,7 +54,7 @@ public class EmployeeValidator {
 
             EntityManager em = DBUtil.createEntityManager();
 
-            long employees_count = (long)em.createNamedQuery( "checkRegisterdCode", long.class ).setParameter( "code", code ).getSingleResult();
+            long employees_count = (long)em.createNamedQuery( "checkRegisteredCode", Long.class ).setParameter( "code", code ).getSingleResult();
             em.close();
 
             if ( employees_count > 0 ){
