@@ -64,6 +64,12 @@ public class Report {
     @Column(name = "updated_at", nullable = false)
     private Timestamp updated_at;
 
+    @Column(name = "come_time", nullable = false)
+    private String come_time;
+
+    @Column(name = "out_time", nullable = false)
+    private String out_time;
+
     // getter setter
     public Integer getId() {
         return id;
@@ -87,6 +93,22 @@ public class Report {
 
     public void setReport_date(Date report_date) {
         this.report_date = report_date;
+    }
+
+    public String getCome_time() {
+        return come_time;
+    }
+
+    public void setCome_time(String come_time) {
+        this.come_time = come_time;
+    }
+
+    public String getOut_time() {
+        return out_time;
+    }
+
+    public void setOut_time(String out_time) {
+        this.out_time = out_time;
     }
 
     public String getTitle() {
